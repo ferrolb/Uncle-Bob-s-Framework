@@ -1,8 +1,10 @@
 package com.lagniappe.calculator.core
 
+import io.github.anschnapp.mutflow.MutationTarget
 import java.math.BigDecimal
 import java.math.RoundingMode
 
+@MutationTarget
 class CalculatorEngine {
 
     var state: CalculatorState = CalculatorState()
