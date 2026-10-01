@@ -168,7 +168,7 @@ class CalculatorEngine {
             return try {
                 val bd = BigDecimal(str.ifEmpty { "0" })
                 formatBigDecimal(bd.divide(BigDecimal("100"), 10, RoundingMode.HALF_UP))
-            } catch (e: Exception) {
+            } catch (_: Exception) {
                 "0"
             }
         }
@@ -242,7 +242,7 @@ class CalculatorEngine {
                     }
                 }
                 CalculationResult(formatBigDecimal(result))
-            } catch (e: Exception) {
+            } catch (_: Exception) {
                 CalculationResult("Error", isError = true)
             }
         }
